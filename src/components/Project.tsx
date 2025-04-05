@@ -58,7 +58,7 @@ const Project = () => {
     <div className=" flex flex-col items-center justify-center w-full  h-fit">
       <div className="flex flex-col xl:flex-row w-full md:max-w-7xl ">
         <div className=" w-full lg:w-[70%] ">
-          <div className="w-full bg-[#252323]">
+          <div className="w-full bg-[#252323] mb-4 md:mb-0">
             <ProjectMedia
               showVideo={showVideo}
               videoSrc={project.video}
@@ -106,7 +106,7 @@ const Project = () => {
               <ProjectIconsRow icons={project.icons} />
             </div>
 
-            <div className=" xl:absolute xl:top-55 mt-4 md:ml-10">
+            <div className=" xl:absolute xl:top-30 2xl:top-60 mt-4 md:ml-10 pb-5 md:pb-0">
               <div className=" md:ml-7 flex md:justify-around justify-center items-center gap-4 text-sm">
                 <ProjectButton
                   onClick={prevProject}
