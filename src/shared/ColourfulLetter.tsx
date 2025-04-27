@@ -8,7 +8,7 @@ export function ColourfulLetter({ letter }: { letter: string }) {
   useEffect(() => {
     const interval = setInterval(() => {
       if (!isHovered) {
-        setColour(GetNatureColour());
+        setColour(GetMidtoneColour());
       }
     }, 2000);
 
@@ -17,7 +17,7 @@ export function ColourfulLetter({ letter }: { letter: string }) {
 
   const handleMouseEnter = () => {
     setIsHovered(true);
-    setColour(GetMidtoneColour());
+    setColour(GetNatureColour());
   };
 
   const handleMouseLeave = () => {
