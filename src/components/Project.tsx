@@ -55,10 +55,10 @@ const Project = () => {
   // const router = useRouter();
 
   return (
-    <div className=" flex flex-col items-center justify-center w-full  h-fit">
+    <div className=" flex flex-col items-center justify-center w-full h-fit ">
       <div className="flex flex-col xl:flex-row w-full md:max-w-7xl ">
         <div className=" w-full lg:w-[70%] ">
-          <div className="w-full bg-[#252323] mb-4 md:mb-0">
+          <div className="w-full md:bg-[#252323] mb-4 md:mb-0 p-5 md:p-0">
             <ProjectMedia
               showVideo={showVideo}
               videoSrc={project.video}
@@ -69,7 +69,7 @@ const Project = () => {
         </div>
 
         <div className="w-full xl:w-[40%] md:pl-10  md:max-h-[450px] md:mt-0">
-          <div className="h-full bg-card-dark rounded-md lg:shadow-xl lg:shadow-black ">
+          <div className="h-full md:bg-card-dark rounded-md lg:shadow-xl lg:shadow-black ">
             <div className="text-left p-5 md:p-10 md:pt-5 md:pb-5 ">
               <ProjectDetailsHeader
                 title={project.title}
