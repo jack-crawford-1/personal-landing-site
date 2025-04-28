@@ -6,20 +6,20 @@ import Project from '../components/Project';
 import { useEffect } from 'react';
 
 export default function Home() {
-  // useEffect(() => {
-  //   const userAgent =
-  //     typeof navigator === 'undefined' ? '' : navigator.userAgent;
-  //   const isMobile =
-  //     /iPhone|iPad|iPod|Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(
-  //       userAgent
-  //     );
+  useEffect(() => {
+    const userAgent =
+      typeof navigator === 'undefined' ? '' : navigator.userAgent;
+    const isMobile =
+      /iPhone|iPad|iPod|Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(
+        userAgent
+      );
 
-  //   const isSmallScreen = window.innerWidth <= 768;
+    const isSmallScreen = window.innerWidth <= 768;
 
-  //   if (isMobile || isSmallScreen) {
-  //     window.location.href = 'https://www.olddogonline.com/';
-  //   }
-  // }, []);
+    if (isMobile || isSmallScreen) {
+      window.location.href = 'https://www.olddogonline.com/';
+    }
+  }, []);
 
   return (
     <>
