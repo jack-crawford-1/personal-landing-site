@@ -11,6 +11,8 @@ export const projects = [
     alt: 'Community garden',
     title: 'Community Garden',
     route: 'communitygarden',
+    shortDescription:
+      'A web app for finding, contributing to, and managing community gardens. Users can submit new garden locations with coordinates and extra details.',
     description:
       'A web app for finding, contributing to, and managing community gardens. Users can submit new garden locations with coordinates and extra details. Implements authentication, Prisma with SQLite for data management, and Google Maps API for visualising location data. Built using Next.js, TypeScript, and Tailwind CSS with a focus on backend logic and user contributions.',
     githubUrl: 'https://github.com/jack-crawford-1/Community-Garden-App',
@@ -69,6 +71,8 @@ export const projects = [
     alt: 'Subscribe and Pay',
     title: 'Subscribe and Pay',
     route: 'subscribe',
+    shortDescription:
+      'A full-stack app for handling subscriptions and payments using Paystation’s OAuth and Hosted Purchases API.',
     description:
       'A full-stack app for handling subscriptions and payments using Paystation’s OAuth and Hosted Purchases API. Payment responses are validated before storing data in MongoDB. Features authentication with JWT, bcrypt, and Express, with Mongoose for managing database logic. Provides API endpoints for user auth, subscription setup, and payment handling.',
     githubUrl: 'https://github.com/jack-crawford-1/Subscribe-and-Payments',
@@ -128,6 +132,8 @@ export const projects = [
     alt: 'Custom Map',
     title: 'DOC Hiking Trails',
     route: 'hiking',
+    shortDescription:
+      'A full-stack web app for browsing, sharing, and managing hiking tracks..',
     description:
       'A full-stack web app for browsing, sharing, and managing hiking tracks. Uses Google Maps API for map rendering, integrates external APIs for geolocation data, and stores trails in PostgreSQL. Implements authentication, geospatial logic, and API efficiency. Built to explore backend mapping tools, elevation overlays, and custom user-drawn routes.',
     githubUrl: 'https://github.com/jack-crawford-1/Hiking-App',
@@ -180,7 +186,9 @@ export const projects = [
     ],
     alt: 'Keyboard',
     title: 'Tonejs Keyboard',
-    route: 'minipiano',
+    route: 'keys',
+    shortDescription:
+      'A mini piano app built with React, TypeScript, and Tone.js for real-time audio synthesis.',
     description:
       'A mini piano app built with React, TypeScript, and Tone.js for real-time audio synthesis. Tracks keyboard input, plays chords, and handles user interaction with state-driven logic. Uses event listeners to manage key presses and trigger dynamic audio rendering. Focuses on real-time audio, sound accuracy, and performance optimisation.',
     githubUrl: 'https://github.com/jack-crawford-1/Keyboard-Player-React',

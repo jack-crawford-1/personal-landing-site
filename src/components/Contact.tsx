@@ -49,13 +49,12 @@ const Contact = () => {
   };
 
   return (
-    <div className="h-screen bg-dark text-light flex flex-col items-center justify-center">
-      <div className="w-full max-w-xl mx-auto p-8 ">
-        <h3>Contact Me</h3>
+    <div className=" w-full bg-dark text-light flex flex-col items-center justify-center">
+      <div className="w-full max-w-4xl mx-auto md:p-8 ">
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className="bg-red-500 p-8 rounded-2xl flex flex-col gap-4"
+          className="bg-dark p-8 rounded-md flex flex-col gap-4"
         >
           <label className="flex flex-col">
             <span>Name</span>
@@ -65,7 +64,7 @@ const Contact = () => {
               value={form.name}
               onChange={handleChange}
               required
-              className="bg-gray-200 p-2 rounded-md"
+              className="bg-gray-200    text-dark p-2 rounded-md"
             />
           </label>
           <br />
@@ -77,7 +76,7 @@ const Contact = () => {
               value={form.email}
               onChange={handleChange}
               required
-              className="bg-gray-200 p-2 rounded-md"
+              className="bg-gray-200 text-dark  p-2 rounded-md"
             />
           </label>
           <br />
@@ -89,21 +88,16 @@ const Contact = () => {
               onChange={handleChange}
               required
               rows={5}
-              className="bg-gray-200 p-2 rounded-md"
+              className="bg-gray-200 text-dark  p-2 rounded-md"
             />
           </label>
           <br />
           <button
             type="submit"
             disabled={loading}
-            className="flex gap-2 bg-black py-3 px-4 w-[200px] rounded-md"
+            className="flex bg-black py-3 px-4 w-[200px] rounded-md justify-center items-center"
           >
-            {loading ? 'Sending...' : 'Send Message'}
-            <img
-              src="/icons/next.png"
-              alt="up arrow"
-              style={{ width: '30px', marginLeft: '8px' }}
-            />
+            {loading ? 'Sending...' : 'Send Message →'}
           </button>
         </form>
       </div>
