@@ -20,7 +20,7 @@ const CommunityGardens = () => {
   return (
     <div className="bg-dark text-light min-h-screen flex flex-col items-center p-10 space-y-10">
       {/* HERO */}
-      <div className="w-full flex justify-start pb-10  mt-10 pl-10 md:pl-40">
+      <div className="w-full flex justify-start pb-10  mt-10 md:pl-40">
         <Hero />
       </div>
 
