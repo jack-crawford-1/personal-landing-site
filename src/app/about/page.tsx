@@ -17,7 +17,7 @@ const About = () => {
         <div className="w-full md:w-1/2 flex flex-col space-y-6 pt-15">
           <IntroText />
           <Skills />
-          <div className="mt-2 md:mt-0 md:w-full flex flex-wrap justify-center items-center gap-4 w-[90%] pl-10 md:pl-0">
+          <div className="mt-2 md:mt-0 md:w-full flex flex-wrap justify-center items-center gap-4 md:pl-0">
             <TechStackLogos />
           </div>
         </div>
