@@ -88,12 +88,6 @@ const CommunityGardens = () => {
           className="w-full h-auto rounded-lg shadow-lg"
         />
       </div>
-
-      {/* CONTACT SECTION */}
-      <div className="w-full max-w-3xl text-center">
-        <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
-        <Contact />
-      </div>
     </div>
   );
 };
