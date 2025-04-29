@@ -5,26 +5,26 @@ export const projects = [
     video: '/projects/video/garden.mp4',
     images: [
       '/projects/images/garden.png',
-      '/projects/images/garden.png',
-      '/projects/images/garden.png',
+      '/projects/images/garden2.png',
+      '/projects/images/garden3.png',
     ],
     alt: 'Community garden',
     title: 'Community Garden',
     route: 'communitygarden',
     shortDescription:
-      'A web app for finding, contributing to, and managing community gardens. Users can submit new garden locations with coordinates and extra details.',
+      'A web app for finding, adding, and managing community gardens on a map.',
     description:
-      'A web app for finding, contributing to, and managing community gardens. Users can submit new garden locations with coordinates and extra details. Implements authentication, Prisma with SQLite for data management, and Google Maps API for visualising location data. Built using Next.js, TypeScript, and Tailwind CSS with a focus on backend logic and user contributions.',
+      'This app lets users submit new gardens by picking a spot on a map and adding details. It handles authentication, file uploads, and stores location data in a database. Built with Next.js, TypeScript, Tailwind, Prisma, and Google Maps',
     githubUrl: 'https://github.com/jack-crawford-1/Community-Garden-App',
     insetImage: '/project/garden-1a.png',
     learnings1:
-      'I initially experimented with Leaflet.js due to its lightweight nature, but I quickly realised its limitations, particularly in built-in geocoding. Switching to Google Maps provided much more flexibility, however, I had to fine-tune the controls and UI elements. For file handling, Multer made the process of uploading images straightforward, but I encountered challenges with handling large file sizes and ensuring secure validation. Implementing proper MIME-type checks and file compression was necessary to prevent security vulnerabilities and optimise performance. When integrating authentication, NextAuth.js worked well, but I found that relying solely on in-memory sessions led to issues with persistence, especially across server restarts. Moving to a database-backed session storage significantly improved stability and ensured a more reliable auth flow for users.',
+      'I started with Leaflet.js but switched to Google Maps after running into limits around geocoding and flexibility. I had to properly control the map UI and deal with quirks like mobile dragging and zoom.',
     learnings2:
-      'While setting up user input for map-based data, I originally used plain text fields where users had to enter coordinates manually. This turned out to be confusing and easy to get wrong. Switching to a map-based selection made things much easier and more accurate. I added reverse geocoding to show location names, but ran into rate limits during testing. I fixed this by caching recent results and only sending the request when the form was submitted. For styling, I used Tailwind CSS which helped with layout, but I still had to create a few custom classes to keep the map container responsive and layering consistent.',
+      'I originally had users manually type in coordinates, which was confusing. Moving to a click-to-select map made it way easier. I also had to manage API rate limits when reverse geocoding addresses during form submissions.',
     learnings3:
-      'I started off using a local JSON file to store location data while testing, but moved to PostgreSQL once I needed better filtering and search. This made it easier to find places nearby or filter by tags. I used PostGIS for distance calculations, but had to write some custom SQL to keep things fast as more data was added. Adding indexes and limiting results to a bounding box helped a lot. I used Prisma for most database tasks, but sometimes had to fall back to raw SQL when Prisma couldn’t handle the more complex spatial queries.',
+      'At first I used a local JSON file to save garden info, but it didn’t scale. Switching to PostgreSQL and using PostGIS for distance filtering was a huge upgrade. I had to optimize spatial queries manually to keep things fast.',
     futurePlans:
-      'Future plans include switching to PostgreSQL with PostGIS for improved spatial queries, adding image uploads with previews, tagging and filtering, moderation tools, and a more mobile-friendly layout. A small public API is also planned to support third-party access.',
+      'I want to add image uploads with previews, tagging and filtering gardens, better mobile layout, moderation tools, and eventually a small public API.',
 
     icons: [
       {
@@ -65,26 +65,25 @@ export const projects = [
     video: '/projects/video/subscribe.mp4',
     images: [
       '/projects/images/subscribe.png',
-      '/projects/images/subscribe.png',
-      '/projects/images/subscribe.png',
+      '/projects/images/subscribe2.png',
+      '/projects/images/subscribe3.png',
     ],
     alt: 'Subscribe and Pay',
     title: 'Subscribe and Pay',
     route: 'subscribe',
     shortDescription:
-      'A full-stack app for handling subscriptions and payments using Paystation’s OAuth and Hosted Purchases API.',
-    description:
-      'A full-stack app for handling subscriptions and payments using Paystation’s OAuth and Hosted Purchases API. Payment responses are validated before storing data in MongoDB. Features authentication with JWT, bcrypt, and Express, with Mongoose for managing database logic. Provides API endpoints for user auth, subscription setup, and payment handling.',
+      'A full-stack app for managing user subscriptions and taking payments through Paystation.',
+    description: `This project handles user signup, subscription setup, and payment processing using Paystation's APIs. It validates payment results, stores user info in MongoDB, and uses JWTs for authentication. Built with React, Node.js, Express, and MongoDB.`,
     githubUrl: 'https://github.com/jack-crawford-1/Subscribe-and-Payments',
     insetImage: '/project/subscribe1a.png',
     learnings1:
-      'I initially experimented with Leaflet.js due to its lightweight nature, but I quickly realised its limitations, particularly in built-in geocoding. Switching to Google Maps provided much more flexibility, however, I had to fine-tune the controls and UI elements. For file handling, Multer made the process of uploading images straightforward, but I encountered challenges with handling large file sizes and ensuring secure validation. Implementing proper MIME-type checks and file compression was necessary to prevent security vulnerabilities and optimise performance. When integrating authentication, NextAuth.js worked well, but I found that relying solely on in-memory sessions led to issues with persistence, especially across server restarts. Moving to a database-backed session storage significantly improved stability and ensured a more reliable auth flow for users.',
+      'Handling the full OAuth handshake with Paystation was trickier than expected. I had to work through managing tokens properly and making sure failures didn’t break the user flow.',
     learnings2:
-      'While setting up user input for map-based data, I originally used plain text fields where users had to enter coordinates manually. This turned out to be confusing and easy to get wrong. Switching to a map-based selection made things much easier and more accurate. I added reverse geocoding to show location names, but ran into rate limits during testing. I fixed this by caching recent results and only sending the request when the form was submitted. For styling, I used Tailwind CSS which helped with layout, but I still had to create a few custom classes to keep the map container responsive and layering consistent.',
+      'I used bcrypt to hash passwords and JWTs for sessions. Building in validation for webhook responses and watching for bad payloads taught me a lot about security and real-world vulnerabilities.',
     learnings3:
-      'I started off using a local JSON file to store location data while testing, but moved to PostgreSQL once I needed better filtering and search. This made it easier to find places nearby or filter by tags. I used PostGIS for distance calculations, but had to write some custom SQL to keep things fast as more data was added. Adding indexes and limiting results to a bounding box helped a lot. I used Prisma for most database tasks, but sometimes had to fall back to raw SQL when Prisma couldn’t handle the more complex spatial queries.',
+      'It was easy to mock the payment process locally, but actually hooking up to the live Paystation sandbox forced me to properly deal with weird edge cases — like network failures and users closing windows mid-payment.',
     futurePlans:
-      'Future plans include switching to PostgreSQL with PostGIS for improved spatial queries, adding image uploads with previews, tagging and filtering, moderation tools, and a more mobile-friendly layout. A small public API is also planned to support third-party access.',
+      'Next steps are adding a proper subscription management dashboard, building better error handling for payment failures, and eventually supporting multiple payment providers (not just Paystation).',
     icons: [
       {
         src: '/logos/react.png',
@@ -126,26 +125,26 @@ export const projects = [
     video: '/projects/video/hiking.mp4',
     images: [
       '/projects/images/hiking.png',
-      '/projects/images/hiking.png',
-      '/projects/images/hiking.png',
+      '/projects/images/hiking2.png',
+      '/projects/images/hiking3.png',
     ],
     alt: 'Custom Map',
     title: 'DOC Hiking Trails',
     route: 'hiking',
     shortDescription:
-      'A full-stack web app for browsing, sharing, and managing hiking tracks..',
+      'A web app for browsing, adding, and managing hiking tracks with custom maps.',
     description:
-      'A full-stack web app for browsing, sharing, and managing hiking tracks. Uses Google Maps API for map rendering, integrates external APIs for geolocation data, and stores trails in PostgreSQL. Implements authentication, geospatial logic, and API efficiency. Built to explore backend mapping tools, elevation overlays, and custom user-drawn routes.',
+      'This app shows official and user-submitted hiking tracks on a map. Users can create their own tracks, view trail details, and filter by distance. Built with React, Express, PostgreSQL, and Google Maps APIs.',
     githubUrl: 'https://github.com/jack-crawford-1/Hiking-App',
     insetImage: '/project/hiking1a.png',
     learnings1:
-      'I initially experimented with Leaflet.js due to its lightweight nature, but I quickly realised its limitations, particularly in built-in geocoding. Switching to Google Maps provided much more flexibility, however, I had to fine-tune the controls and UI elements. For file handling, Multer made the process of uploading images straightforward, but I encountered challenges with handling large file sizes and ensuring secure validation. Implementing proper MIME-type checks and file compression was necessary to prevent security vulnerabilities and optimise performance. When integrating authentication, NextAuth.js worked well, but I found that relying solely on in-memory sessions led to issues with persistence, especially across server restarts. Moving to a database-backed session storage significantly improved stability and ensured a more reliable auth flow for users.',
+      'I used PostGIS for storing trails and running spatial queries. I learned how important it is to add bounding box limits and indexing when you’re dealing with lots of map data.',
     learnings2:
-      'While setting up user input for map-based data, I originally used plain text fields where users had to enter coordinates manually. This turned out to be confusing and easy to get wrong. Switching to a map-based selection made things much easier and more accurate. I added reverse geocoding to show location names, but ran into rate limits during testing. I fixed this by caching recent results and only sending the request when the form was submitted. For styling, I used Tailwind CSS which helped with layout, but I still had to create a few custom classes to keep the map container responsive and layering consistent.',
+      'Early versions made way too many calls to the Maps API. I added caching and debounced requests to make it more efficient and cheaper to run.',
     learnings3:
-      'I started off using a local JSON file to store location data while testing, but moved to PostgreSQL once I needed better filtering and search. This made it easier to find places nearby or filter by tags. I used PostGIS for distance calculations, but had to write some custom SQL to keep things fast as more data was added. Adding indexes and limiting results to a bounding box helped a lot. I used Prisma for most database tasks, but sometimes had to fall back to raw SQL when Prisma couldn’t handle the more complex spatial queries.',
+      'Building a good UX for drawing lines and shapes on a map was a lot harder than I thought. I had to tweak the drawing libraries and work out how to store and rehydrate custom user tracks without breaking.',
     futurePlans:
-      'Future plans include switching to PostgreSQL with PostGIS for improved spatial queries, adding image uploads with previews, tagging and filtering, moderation tools, and a more mobile-friendly layout. A small public API is also planned to support third-party access.',
+      'I want to add better elevation overlays, let users export their drawn trails, improve the mobile experience, and build a simple track review and rating system.',
     icons: [
       {
         src: '/logos/react.png',
@@ -180,27 +179,26 @@ export const projects = [
     id: 4,
     video: '/projects/video/keys.mp4',
     images: [
+      '/projects/images/keys2.png',
       '/projects/images/keys.png',
-      '/projects/images/keys.png',
-      '/projects/images/keys.png',
+      '/projects/images/keys3.png',
     ],
     alt: 'Keyboard',
     title: 'Tonejs Keyboard',
     route: 'keys',
     shortDescription:
-      'A mini piano app built with React, TypeScript, and Tone.js for real-time audio synthesis.',
+      'A browser-based piano that plays chords using your keyboard. Built with React, TypeScript, and Tone.js.',
     description:
-      'A mini piano app built with React, TypeScript, and Tone.js for real-time audio synthesis. Tracks keyboard input, plays chords, and handles user interaction with state-driven logic. Uses event listeners to manage key presses and trigger dynamic audio rendering. Focuses on real-time audio, sound accuracy, and performance optimisation.',
+      'This is a simple piano app that lets you trigger chords by pressing keys on your physical keyboard. It uses Tone.js for sound and highlights each note on a visual piano. The layout includes clickable chord buttons, but they don’t trigger sound (yet). Only keyboard input is supported for now.',
     githubUrl: 'https://github.com/jack-crawford-1/Keyboard-Player-React',
     insetImage: '/project/piano.png',
     learnings1:
-      'I initially experimented with Leaflet.js due to its lightweight nature, but I quickly realised its limitations, particularly in built-in geocoding. Switching to Google Maps provided much more flexibility, however, I had to fine-tune the controls and UI elements. For file handling, Multer made the process of uploading images straightforward, but I encountered challenges with handling large file sizes and ensuring secure validation. Implementing proper MIME-type checks and file compression was necessary to prevent security vulnerabilities and optimise performance. When integrating authentication, NextAuth.js worked well, but I found that relying solely on in-memory sessions led to issues with persistence, especially across server restarts. Moving to a database-backed session storage significantly improved stability and ensured a more reliable auth flow for users.',
+      'I used Tone.js to build a polyphonic synth and trigger multiple notes at once. Had to dig into how attack/release settings affect sound and timing. It was good practice for building audio tools that feel responsive.',
     learnings2:
-      'While setting up user input for map-based data, I originally used plain text fields where users had to enter coordinates manually. This turned out to be confusing and easy to get wrong. Switching to a map-based selection made things much easier and more accurate. I added reverse geocoding to show location names, but ran into rate limits during testing. I fixed this by caching recent results and only sending the request when the form was submitted. For styling, I used Tailwind CSS which helped with layout, but I still had to create a few custom classes to keep the map container responsive and layering consistent.',
-    learnings3:
-      'I started off using a local JSON file to store location data while testing, but moved to PostgreSQL once I needed better filtering and search. This made it easier to find places nearby or filter by tags. I used PostGIS for distance calculations, but had to write some custom SQL to keep things fast as more data was added. Adding indexes and limiting results to a bounding box helped a lot. I used Prisma for most database tasks, but sometimes had to fall back to raw SQL when Prisma couldn’t handle the more complex spatial queries.',
+      'I used a Set to track pressed keys and map them to chords like C7 or Am. This was a nice intro to combining music theory with real-time input and React state updates.',
+    learnings3: `I got the keyboard input working first and left the styling as an afterthought. The result: the app looks off on mobile, and the chord buttons don’t even do anything. It was a good reminder that if something’s on screen, it should either work or get left out.`,
     futurePlans:
-      'Future plans include switching to PostgreSQL with PostGIS for improved spatial queries, adding image uploads with previews, tagging and filtering, moderation tools, and a more mobile-friendly layout. A small public API is also planned to support third-party access.',
+      'Next steps are making the chord buttons actually play sound, fixing the layout so it works properly on mobile, tweaking the synth settings to sound better, and maybe adding a basic playback or recording feature later on.',
     icons: [
       {
         src: '/logos/react.png',

@@ -142,6 +142,7 @@ import { ProjectButton } from './ProjectButton';
 import { ProjectMedia } from './ProjectMedia';
 import Link from 'next/link';
 import { GetRandomColour } from '../utils/GetRandomColour';
+import LinksBottom from './LinksBottom';
 
 const ProjectIconsRow = ({
   icons,
@@ -197,8 +198,8 @@ const Project = () => {
   }, []);
 
   return (
-    <div className=" flex flex-col items-center justify-center w-full h-fit ">
-      <div className="flex flex-col xl:flex-row w-full md:max-w-7xl ">
+    <div className="relative flex flex-col items-center justify-center w-full h-fit ">
+      <div className="flex flex-col xl:flex-row w-full md:max-w-7xl pb-10">
         {/* <div className=" w-full lg:w-[70%] ">
           <div className="w-full md:bg-[#252323] mb-4 md:mb-0 p-5 md:p-0">
             <ProjectMedia
@@ -210,7 +211,7 @@ const Project = () => {
           </div>
         </div> */}
 
-        <div className="grid grid-cols-1 md:grid-cols-2  gap-2 p-0">
+        <div className="grid grid-cols-1 md:grid-cols-2  gap-2 md:p-10">
           {projects.map((project) => (
             <div key={project.id} className="bg-dark p-6 rounded-lg shadow-md">
               <img
@@ -222,7 +223,7 @@ const Project = () => {
               <p className="text-gray-400 mb-4">{project.shortDescription}</p>
               <a
                 href={project.route}
-                className="text-white hover:underline hover:text-gray-300 transition-all duration-300"
+                className="text-gray-500 hover:underline hover:text-gray-300 transition-all duration-300"
               >
                 Read more →
               </a>
@@ -278,6 +279,7 @@ const Project = () => {
           </div> */}
         {/* </div> */}
       </div>
+      <LinksBottom />
     </div>
   );
 };
