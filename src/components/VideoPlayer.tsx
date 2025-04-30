@@ -48,8 +48,8 @@ export default function CustomVideoPlayer({
   };
 
   return (
-    <div className="flex flex-col items-center justify-center w-full max-w-5xl mx-auto">
-      <div className="relative w-full aspect-video  ">
+    <div className="flex flex-col items-center justify-center w-full max-w-3xl mx-auto">
+      <div className="relative w-full aspect-video ">
         <video
           key={key}
           ref={videoRef}
