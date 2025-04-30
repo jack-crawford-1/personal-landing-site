@@ -16,26 +16,26 @@ export default function CustomVideoPlayer({
   const [showPoster, setShowPoster] = useState(true);
   const [key, setKey] = useState(0);
 
-  const togglePlayPause = async () => {
-    const video = videoRef.current;
-    if (!video) return;
+  // const togglePlayPause = async () => {
+  //   const video = videoRef.current;
+  //   if (!video) return;
 
-    try {
-      if (isPlaying) {
-        video.pause();
-        setIsPlaying(false);
-      } else {
-        const playPromise = video.play();
+  //   try {
+  //     if (isPlaying) {
+  //       video.pause();
+  //       setIsPlaying(false);
+  //     } else {
+  //       const playPromise = video.play();
 
-        if (playPromise !== undefined) {
-          await playPromise;
-          setIsPlaying(true);
-        }
-      }
-    } catch (err) {
-      console.error('Error attempting to play the video:', err);
-    }
-  };
+  //       if (playPromise !== undefined) {
+  //         await playPromise;
+  //         setIsPlaying(true);
+  //       }
+  //     }
+  //   } catch (err) {
+  //     console.error('Error attempting to play the video:', err);
+  //   }
+  // };
 
   useEffect(() => {
     setKey((prev) => prev + 1);
@@ -64,12 +64,12 @@ export default function CustomVideoPlayer({
         />
       </div>
 
-      <button
+      {/* <button
         onClick={togglePlayPause}
         className="mt-4 px-6 py-2 bg-gray-800 text-white rounded-md border-2 border-gray-400 text-sm font-bold hover:bg-gray-700 transition"
       >
         {isPlaying ? 'Pause' : 'Play'}
-      </button>
+      </button> */}
     </div>
   );
 }
