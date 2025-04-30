@@ -7,50 +7,38 @@ import { projects } from '@/src/data/projects';
 import { useRef } from 'react';
 import LinksBottom from '@/src/components/LinksBottom';
 import Link from 'next/link';
+import CustomVideoPlayer from '@/src/components/VideoPlayer';
 
 const Subscribe = () => {
   const gardenProject = projects.find(
     (project) => project.title === 'Subscribe and Pay'
   );
 
-  const videoRef = useRef<HTMLVideoElement>(null);
-
   if (!gardenProject) {
     return <p>Project not found.</p>;
   }
 
-  const currentIndex = projects.findIndex(
-    (project) => project.title === gardenProject.title
-  );
-  const nextProject = projects[(currentIndex + 1) % projects.length];
-
   return (
     <div className="relative bg-dark text-light min-h-screen flex flex-col items-center p-10 space-y-10">
-      {/* HERO */}
       <div className="w-full flex justify-start pb-10  mt-10 md:mt-5 md:pl-80">
         <Hero />
       </div>
 
       <div className="max-w-2xl">
-        {/* PROJECT TEXT */}
         <div className=" space-y-6 text-center md:text-left">
           <h2 className="text-3xl font-bold ubuntu-bold">
             {gardenProject.title}
           </h2>
-          <div className="w-full max-w-2xl">
-            <video
-              ref={videoRef}
-              src={gardenProject.video}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-auto rounded-lg shadow-lg"
+          <div className="w-screen md:w-full px-2 -mx-10 md:mx-0">
+            <CustomVideoPlayer
+              videoSource={gardenProject.video}
+              posterSource={gardenProject.images[0]}
             />
           </div>
-          {/* TECH STACK ICONS */}
-          <div className="flex flex-wrap gap-4 justify-start pt-6 ">
-            <h2 className="text-md ubuntu-bold pt-2 uppercase">Built with</h2>
+          <div className="flex flex-wrap gap-4 justify-start pt-6">
+            <h2 className="text-md ubuntu-bold pt-2 uppercase w-full sm:w-auto">
+              Built with
+            </h2>
             {gardenProject.icons?.map((icon, index) => (
               <Image
                 key={index}
@@ -63,7 +51,7 @@ const Subscribe = () => {
             ))}
           </div>
 
-          <div className="space-y-4 pt-4">
+          <div className="space-y-4 pt-4 text-start">
             <p>{gardenProject.description}</p>
             <p>{gardenProject.learnings1}</p>
             <p>{gardenProject.learnings2}</p>
