@@ -39,7 +39,7 @@ const CommunityGardens = () => {
           </div>
 
           <div className="flex flex-wrap gap-4 justify-start pt-6 ">
-            <h2 className="text-md ubuntu-bold pt-2 uppercase w-full sm:w-auto">
+            <h2 className="text-md ubuntu-bold uppercase w-full sm:w-auto">
               Built with
             </h2>
             {gardenProject.icons?.map((icon, index) => (
