@@ -41,9 +41,9 @@ export default function CustomVideoPlayer({
   };
 
   return (
-    <div className="flex flex-col items-center justify-center bg-red-400 w-full max-w-5xl mx-auto">
+    <div className="flex flex-col items-center justify-center bg-green-400 w-full max-w-5xl mx-auto">
       <div className="relative w-full aspect-video  ">
-        <AnimatePresence>
+        {/* <AnimatePresence>
           {showPoster && (
             <motion.img
               key="poster"
@@ -56,7 +56,7 @@ export default function CustomVideoPlayer({
               transition={{ duration: 0.8 }}
             />
           )}
-        </AnimatePresence>
+        </AnimatePresence> */}
 
         <motion.video
           key={key}
