@@ -37,7 +37,7 @@ export default function CustomVideoPlayer({
   }, [videoSource]);
 
   const handleReadyToDisplay = () => {
-    setTimeout(() => setShowPoster(false), 300);
+    setShowPoster(false);
   };
 
   return (
