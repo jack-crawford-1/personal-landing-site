@@ -66,7 +66,7 @@ export default function CustomVideoPlayer({
           className="absolute inset-0 w-full h-full object-cover "
           playsInline
           loop={false}
-          controls={false}
+          controls={true}
           muted
         />
       </div>
