@@ -7,6 +7,8 @@ import { projects } from '@/src/data/projects';
 import { useRef } from 'react';
 import LinksBottom from '@/src/components/LinksBottom';
 
+import Link from 'next/link';
+
 const CommunityGardens = () => {
   const gardenProject = projects.find(
     (project) => project.title === 'Community Garden'
@@ -89,6 +91,13 @@ const CommunityGardens = () => {
               />
             </div>
           </div>
+        </div>
+        <div className="mt-10 text-center flex justify-end">
+          <Link href={'/subscribe'}>
+            <button className="w-full bg-white text-dark px-6 py-3 rounded-md hover:bg-gray-200 transition shadow-md shadow-gray-500 font-bold">
+              Next Project →
+            </button>
+          </Link>
         </div>
       </div>
       <LinksBottom />

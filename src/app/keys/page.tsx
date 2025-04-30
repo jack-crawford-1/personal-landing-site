@@ -1,11 +1,11 @@
 'use client';
 
 import Image from 'next/image';
-import Contact from '@/src/components/Contact';
 import Hero from '@/src/components/Hero';
 import { projects } from '@/src/data/projects';
 import { useRef } from 'react';
 import LinksBottom from '@/src/components/LinksBottom';
+import Link from 'next/link';
 
 const Keys = () => {
   const gardenProject = projects.find(
@@ -89,6 +89,13 @@ const Keys = () => {
               />
             </div>
           </div>
+        </div>
+        <div className="mt-10 text-center flex justify-end">
+          <Link href={'/communitygarden'}>
+            <button className="w-full bg-white text-dark px-6 py-3 rounded-md hover:bg-gray-200 transition shadow-md shadow-gray-500 font-bold">
+              Next Project →
+            </button>
+          </Link>
         </div>
       </div>
       <LinksBottom />

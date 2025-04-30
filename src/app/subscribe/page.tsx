@@ -6,6 +6,7 @@ import Hero from '@/src/components/Hero';
 import { projects } from '@/src/data/projects';
 import { useRef } from 'react';
 import LinksBottom from '@/src/components/LinksBottom';
+import Link from 'next/link';
 
 const Subscribe = () => {
   const gardenProject = projects.find(
@@ -17,6 +18,11 @@ const Subscribe = () => {
   if (!gardenProject) {
     return <p>Project not found.</p>;
   }
+
+  const currentIndex = projects.findIndex(
+    (project) => project.title === gardenProject.title
+  );
+  const nextProject = projects[(currentIndex + 1) % projects.length];
 
   return (
     <div className="relative bg-dark text-light min-h-screen flex flex-col items-center p-10 space-y-10">
@@ -89,6 +95,13 @@ const Subscribe = () => {
               />
             </div>
           </div>
+        </div>
+        <div className="mt-10 text-center flex justify-end">
+          <Link href={'/hiking'}>
+            <button className="w-full bg-white text-dark px-6 py-3 rounded-md hover:bg-gray-200 transition shadow-md shadow-gray-500 font-bold">
+              Next Project →
+            </button>
+          </Link>
         </div>
       </div>
       <LinksBottom />

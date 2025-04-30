@@ -11,7 +11,6 @@ export default function LinksBottom() {
     }
   }, []);
 
-  // Check if on about page or a specific project page
   const isOnAboutOrProjectPage =
     currentPath === '/about' ||
     currentPath.startsWith('/communitygarden') ||

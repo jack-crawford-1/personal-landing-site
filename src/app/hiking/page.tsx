@@ -1,11 +1,11 @@
 'use client';
 
 import Image from 'next/image';
-import Contact from '@/src/components/Contact';
 import Hero from '@/src/components/Hero';
 import { projects } from '@/src/data/projects';
 import { useRef } from 'react';
 import LinksBottom from '@/src/components/LinksBottom';
+import Link from 'next/link';
 
 const Hiking = () => {
   const gardenProject = projects.find(
@@ -20,13 +20,11 @@ const Hiking = () => {
 
   return (
     <div className="relative bg-dark text-light min-h-screen flex flex-col items-center p-10 space-y-10">
-      {/* HERO */}
       <div className="w-full flex justify-start pb-10  mt-10 md:mt-5 md:pl-80">
         <Hero />
       </div>
 
       <div className="max-w-2xl">
-        {/* PROJECT TEXT */}
         <div className=" space-y-6 text-center md:text-left">
           <h2 className="text-3xl font-bold ubuntu-bold">
             {gardenProject.title}
@@ -42,7 +40,7 @@ const Hiking = () => {
               className="w-full h-auto rounded-lg shadow-lg"
             />
           </div>
-          {/* TECH STACK ICONS */}
+
           <div className="flex flex-wrap gap-4 justify-start pt-6 ">
             <h2 className="text-md ubuntu-bold pt-2 uppercase">Built with</h2>
             {gardenProject.icons?.map((icon, index) => (
@@ -89,6 +87,14 @@ const Hiking = () => {
               />
             </div>
           </div>
+        </div>
+
+        <div className="mt-10 text-center flex justify-end">
+          <Link href={'/keys'}>
+            <button className="w-full bg-white text-dark px-6 py-3 rounded-md hover:bg-gray-200 transition shadow-md shadow-gray-500 font-bold">
+              Next Project →
+            </button>
+          </Link>
         </div>
       </div>
       <LinksBottom />
