@@ -64,7 +64,7 @@ const CommunityGardens = () => {
             ))}
           </div>
 
-          <div className="space-y-4 pt-4">
+          <div className="space-y-4 pt-4 text-start">
             <p>{gardenProject.description}</p>
             <p>{gardenProject.learnings1}</p>
             <p>{gardenProject.learnings2}</p>

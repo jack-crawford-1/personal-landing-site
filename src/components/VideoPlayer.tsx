@@ -67,6 +67,7 @@ export default function CustomVideoPlayer({
           playsInline
           loop={false}
           controls={false}
+          muted
         />
       </div>
 
