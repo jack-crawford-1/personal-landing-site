@@ -58,10 +58,11 @@ export default function CustomVideoPlayer({
           )}
         </AnimatePresence> */}
 
-        <motion.video
+        <video
           key={key}
           ref={videoRef}
           src={videoSource}
+          poster={posterSource}
           onLoadedData={handleReadyToDisplay}
           className="absolute inset-0 w-full h-full object-cover "
           playsInline
