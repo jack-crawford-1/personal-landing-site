@@ -55,29 +55,20 @@ export default function CustomVideoPlayer({
           ref={videoRef}
           src={videoSource}
           poster={posterSource}
-          // onLoadedData={handleReadyToDisplay}
+          onLoadedData={handleReadyToDisplay}
           className="absolute inset-0 w-full h-full object-cover "
           playsInline
           loop={false}
           controls={true}
           muted
-          onLoadedData={() => console.log('video loaded')}
-          onPlay={() => console.log('video playing')}
-          onError={(e) => console.error('video error', e)}
         />
       </div>
 
       <button
-        onClick={async () => {
-          try {
-            const result = await videoRef.current?.play();
-            console.log('play promise result:', result);
-          } catch (err) {
-            console.error('Play error:', err);
-          }
-        }}
+        onClick={togglePlayPause}
+        className="mt-4 px-6 py-2 bg-gray-800 text-white rounded-md border-2 border-gray-400 text-sm font-bold hover:bg-gray-700 transition"
       >
-        Play
+        {isPlaying ? 'Pause' : 'Play'}
       </button>
     </div>
   );
