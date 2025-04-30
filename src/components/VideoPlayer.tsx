@@ -17,16 +17,24 @@ export default function CustomVideoPlayer({
   const [showPoster, setShowPoster] = useState(true);
   const [key, setKey] = useState(0);
 
-  const togglePlayPause = () => {
+  const togglePlayPause = async () => {
     const video = videoRef.current;
-    if (video) {
+    if (!video) return;
+
+    try {
       if (isPlaying) {
         video.pause();
         setIsPlaying(false);
       } else {
-        video.play();
-        setIsPlaying(true);
+        const playPromise = video.play();
+
+        if (playPromise !== undefined) {
+          await playPromise;
+          setIsPlaying(true);
+        }
       }
+    } catch (err) {
+      console.error('Error attempting to play the video:', err);
     }
   };
 
