@@ -8,6 +8,7 @@ import { useRef } from 'react';
 import LinksBottom from '@/src/components/LinksBottom';
 
 import Link from 'next/link';
+import CustomVideoPlayer from '@/src/components/VideoPlayer';
 
 const CommunityGardens = () => {
   const gardenProject = projects.find(
@@ -34,7 +35,7 @@ const CommunityGardens = () => {
             {gardenProject.title}
           </h2>
           <div className="w-full max-w-2xl">
-            <video
+            {/* <video
               ref={videoRef}
               src={gardenProject.video}
               autoPlay
@@ -42,6 +43,10 @@ const CommunityGardens = () => {
               muted
               playsInline
               className="w-full h-auto rounded-lg shadow-lg"
+            /> */}
+            <CustomVideoPlayer
+              videoSource={gardenProject.video}
+              posterSource={gardenProject.images[0]}
             />
           </div>
           {/* TECH STACK ICONS */}
