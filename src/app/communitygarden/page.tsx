@@ -23,12 +23,18 @@ const CommunityGardens = () => {
   const singleProject = Singleproject;
 
   return (
-    <div className="relative bg-dark text-light min-h-screen flex flex-col items-center p-10 space-y-10">
-      <div className="w-full flex justify-start pb-10  mt-10 md:mt-5 md:pl-80">
+    <div className="relative bg-dark text-light min-h-screen flex flex-col items-center p-10 space-y-2 pb-20">
+      <div className="w-full flex justify-start pb-10  mt-10 md:mt-0 md:pl-80">
         <Hero />
       </div>
 
       <div className="max-w-2xl">
+        <Link
+          href="/"
+          className="text-gray-400 hover:text-white text-sm mb-4 block"
+        >
+          ← All Projects
+        </Link>
         <div className=" space-y-6 text-left">
           <h2 className="text-xl font-bold ubuntu-bold">
             {singleProject.map((project) => project.title)}
@@ -39,6 +45,7 @@ const CommunityGardens = () => {
               posterSource={gardenProject.images[0]}
             />
           </div>
+
           <div className="space-y-4 pt-4 text-start">
             <div>
               {singleProject.map((project, index) => (
@@ -103,13 +110,11 @@ const CommunityGardens = () => {
                 </div>
               ))}
             </div>
-
-            <div className="flex gap-2 max-w-4xl flex-wrap"></div>
           </div>
         </div>
-        <div className="mt-10 text-center flex justify-end">
-          <Link href={'/subscribe'}>
-            <button className="w-full bg-white text-dark px-6 py-3 rounded-md hover:bg-gray-200 transition shadow-md shadow-gray-500 font-bold">
+        <div className="mt-10 text-center flex justify-start">
+          <Link href={'/keys'}>
+            <button className="border-white border-2 text-white py-2 px-4 rounded-md text-sm font-medium  transition cursor-pointer w-full hover:bg-blue-500">
               Next Project →
             </button>
           </Link>

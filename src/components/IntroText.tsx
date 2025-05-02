@@ -9,9 +9,10 @@ const IntroText = () => {
       <br />
       <br />
       Lately I’ve been building things like payment flows, API integrations, and
-      map features, mostly working across both the front and back end. Before
-      tech, I spent years in account management, so I’m used to translating
-      between technical constraints and user needs.
+      interactive map features, mostly working across both the front and back
+      end. Before getting into tech, I worked in account management for several
+      years, which gave me experience translating between user needs and
+      technical constraints.
     </div>
   );
 };

@@ -11,7 +11,6 @@ export default function Links() {
     }
   }, []);
 
-  // Check if on about page or a specific project page
   const isOnAboutOrProjectPage =
     currentPath === '/about' ||
     currentPath.startsWith('/communitygarden') ||
@@ -43,19 +42,21 @@ export default function Links() {
             <ColourfulLetter letter={'EMAIL ME'} />
           </a>
         </li>
-        <li className="hover:text-gray-200 uppercase">
+        <li className="hover:text-gray-200 uppercase flex items-center justify-center">
           <button
             onClick={DownloadCv}
-            className="bg-transparent border-none uppercase cursor-pointer text-sm "
+            className=" border-blue-400 border-2 text-white py-2 px-4 rounded-md text-sm font-medium hover:bg-blue-500 transition cursor-pointer uppercase"
           >
-            <span className=" flex pt-2">
+            <span className=" flex ">
               <img
                 src="/icons/download.svg"
                 alt="download"
                 height={20}
                 width={20}
+                className="mr-2"
               />
-              <ColourfulLetter letter={'CV PDF'} />
+
+              {'CV PDF'}
             </span>
           </button>
         </li>

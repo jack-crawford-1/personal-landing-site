@@ -4,21 +4,21 @@ import Tooltip from '../shared/Tooltip';
 export default function TechStackLogos() {
   return (
     <div className="mt-8 w-full flex justify-center  items-center">
-      <div className="flex flex-wrap justify-center gap-5 md:gap-7">
+      <div className="flex flex-wrap justify-center gap-5 md:gap-9">
         <Tooltip text="React.js">
           <Image
             src="/logos/react.png"
             alt="React.js Logo"
-            width={40}
-            height={40}
+            width={30}
+            height={30}
           />
         </Tooltip>
         <Tooltip text="Next.js">
           <Image
             src="/logos/nextjs.png"
             alt="Next.js Logo"
-            width={40}
-            height={40}
+            width={30}
+            height={30}
           />
         </Tooltip>
 
@@ -26,8 +26,8 @@ export default function TechStackLogos() {
           <Image
             src="/logos/javascript.png"
             alt="Javascript Logo"
-            width={40}
-            height={40}
+            width={30}
+            height={30}
           />
         </Tooltip>
 
@@ -35,8 +35,8 @@ export default function TechStackLogos() {
           <Image
             src="/logos/typescript.png"
             alt="Typescript Logo"
-            width={40}
-            height={40}
+            width={30}
+            height={30}
           />
         </Tooltip>
 
@@ -44,8 +44,8 @@ export default function TechStackLogos() {
           <Image
             src="/logos/node.png"
             alt="Node.js Logo"
-            width={40}
-            height={40}
+            width={30}
+            height={30}
           />
         </Tooltip>
 
@@ -53,8 +53,8 @@ export default function TechStackLogos() {
           <Image
             src="/logos/tailwind.png"
             alt="Tailwind Logo"
-            width={40}
-            height={40}
+            width={30}
+            height={30}
           />
         </Tooltip>
 
@@ -62,8 +62,8 @@ export default function TechStackLogos() {
           <Image
             src="/logos/prisma.png"
             alt="Prisma Logo"
-            width={40}
-            height={40}
+            width={30}
+            height={30}
           />
         </Tooltip>
 
@@ -71,8 +71,8 @@ export default function TechStackLogos() {
           <Image
             src="/logos/psql.png"
             alt="PostgreSQL Logo"
-            width={40}
-            height={40}
+            width={30}
+            height={30}
           />
         </Tooltip>
 
@@ -80,8 +80,8 @@ export default function TechStackLogos() {
           <Image
             src="/logos/mongo.png"
             alt="MongoDB Logo"
-            width={40}
-            height={40}
+            width={30}
+            height={30}
           />
         </Tooltip>
 

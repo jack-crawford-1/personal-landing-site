@@ -5,6 +5,7 @@ import Hero from '@/src/components/Hero';
 import IntroText from '@/src/components/IntroText';
 import Skills from '@/src/components/Skills';
 import TechStackLogos from '@/src/components/TeckStackLogos';
+import { DownloadCv } from '@/src/utils/DownloadCv';
 
 const About = () => {
   return (
@@ -20,6 +21,57 @@ const About = () => {
         </div>
         <div className="w-full md:w-1/2 flex flex-col items-center">
           <Skills />
+          <div className="flex gap-6 mt-6 pb-10">
+            <a
+              href="mailto:hello@jackcrawford.co.nz"
+              target="_blank"
+              className="text-sm"
+            >
+              <img
+                src="/logos/email.png"
+                alt="Email"
+                width={30}
+                height={30}
+                className="hover:opacity-80 transition"
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/jackwardcrawford"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/logos/linkedin.png"
+                alt="LinkedIn"
+                width={30}
+                height={30}
+                className="hover:opacity-80 transition"
+              />
+            </a>
+
+            <a
+              href="https://github.com/jack-crawford-1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/logos/github.png"
+                alt="GitHub"
+                width={30}
+                height={30}
+                className="hover:opacity-80 transition"
+              />
+            </a>
+            <button onClick={DownloadCv}>
+              <img
+                src="/icons/download.svg"
+                alt="CV"
+                width={30}
+                height={30}
+                className="hover:opacity-80 transition"
+              />
+            </button>
+          </div>
         </div>
       </div>
     </div>
