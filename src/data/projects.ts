@@ -7,12 +7,13 @@ export const projects = [
       '/projects/images/garden.png',
       '/projects/images/garden2.png',
       '/projects/images/garden3.png',
+      '/projects/images/garden1.png',
     ],
     alt: 'Community garden',
     title: 'Community Garden',
     route: 'communitygarden',
     shortDescription:
-      'A web app for finding, adding, and managing community gardens on a map.',
+      'Full-stack web app designed to make it easier for communities to discover, contribute to, and manage local garden spaces. Whether someone wants to share their garden with others or find one nearby',
     description:
       'This app lets users submit new gardens by picking a spot on a map and adding details. It handles authentication, file uploads, and stores location data in a database. Built with Next.js, TypeScript, Tailwind, Prisma, and Google Maps',
     githubUrl: 'https://github.com/jack-crawford-1/Community-Garden-App',
@@ -67,13 +68,14 @@ export const projects = [
       '/projects/images/subscribe.png',
       '/projects/images/subscribe2.png',
       '/projects/images/subscribe3.png',
+      '/projects/images/subscribe1.png',
     ],
     alt: 'Subscribe and Pay',
     title: 'Subscribe and Pay',
     route: 'subscribe',
     shortDescription:
-      'A full-stack app for managing user subscriptions and taking payments through Paystation.',
-    description: `This project handles user signup, subscription setup, and payment processing using Paystation's APIs. It validates payment results, stores user info in MongoDB, and uses JWTs for authentication. Built with React, Node.js, Express, and MongoDB.`,
+      'A full-stack subscription management app built with a React frontend and a Node/Express backend. It allows users to create accounts, subscribe to plans, process payments via a third-party payment gateway, and manage their subscriptions',
+    description: `This is a full-stack subscription management app built with a React frontend and a Node/Express backend. It allows users to create accounts, subscribe to plans, process payments via a third-party payment gateway, and manage their subscriptions`,
     githubUrl: 'https://github.com/jack-crawford-1/Subscribe-and-Payments',
     insetImage: '/project/subscribe1a.png',
     learnings1:
@@ -127,12 +129,13 @@ export const projects = [
       '/projects/images/hiking.png',
       '/projects/images/hiking2.png',
       '/projects/images/hiking3.png',
+      '/projects/images/hiking1.png',
     ],
     alt: 'Custom Map',
     title: 'DOC Hiking Trails',
     route: 'hiking',
     shortDescription:
-      'A web app for browsing, adding, and managing hiking tracks with custom maps.',
+      'Full-stack web app designed to help users explore and track walking and biking trails throughout New Zealand. It integrates geospatial data, a user-friendly map interface, and custom tracking features—combining frontend interactivity with backend data persistence.',
     description:
       'This app shows official and user-submitted hiking tracks on a map. Users can create their own tracks, view trail details, and filter by distance. Built with React, Express, PostgreSQL, and Google Maps APIs.',
     githubUrl: 'https://github.com/jack-crawford-1/Hiking-App',
@@ -182,12 +185,13 @@ export const projects = [
       '/projects/images/keys2.png',
       '/projects/images/keys.png',
       '/projects/images/keys3.png',
+      '/projects/images/keys1.png',
     ],
     alt: 'Keyboard',
     title: 'Tonejs Keyboard',
     route: 'keys',
     shortDescription:
-      'A browser-based piano that plays chords using your keyboard. Built with React, TypeScript, and Tone.js.',
+      'A lightweight React-based virtual piano app that lets users play notes and view common chords visually and audibly. It was a fun way to blend frontend development with real-time audio playback and UI design.',
     description:
       'This is a simple piano app that lets you trigger chords by pressing keys on your physical keyboard. It uses Tone.js for sound and highlights each note on a visual piano. The layout includes clickable chord buttons, but they don’t trigger sound (yet). Only keyboard input is supported for now.',
     githubUrl: 'https://github.com/jack-crawford-1/Keyboard-Player-React',
