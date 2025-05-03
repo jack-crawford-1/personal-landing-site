@@ -3,8 +3,8 @@ import Tooltip from '../shared/Tooltip';
 
 export default function TechStackLogos() {
   return (
-    <div className="mt-8 w-full flex justify-center  items-center">
-      <div className="flex flex-wrap justify-center gap-5 md:gap-9">
+    <div className="mt-8 w-full flex justify-center items-center">
+      <div className="grid grid-cols-5 gap-5 md:flex md:flex-wrap md:justify-center md:gap-9">
         <Tooltip text="React.js">
           <Image
             src="/logos/react.png"
