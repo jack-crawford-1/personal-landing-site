@@ -10,7 +10,7 @@ import { DownloadCv } from '@/src/utils/DownloadCv';
 const About = () => {
   return (
     <div className="relative bg-dark text-light h-screen flex flex-col justify-center items-center p-10 md:p-20 pb-20">
-      <div className="w-full flex justify-start mt-40 md:mt-0  pb-10 md:pl-30 pt-100 md:pt-0">
+      <div className="w-full flex justify-start mt-40 md:mt-0  pb-10 md:pl-30 pt-60 md:pt-0">
         <Hero />
       </div>
 
@@ -22,6 +22,7 @@ const About = () => {
         <div className="w-full md:w-1/2 flex flex-col items-center">
           <Skills />
           <div className="flex gap-6 mt-6 pb-10">
+            Contact
             <a
               href="mailto:hello@jackcrawford.co.nz"
               target="_blank"
@@ -48,7 +49,6 @@ const About = () => {
                 className="hover:opacity-80 transition"
               />
             </a>
-
             <a
               href="https://github.com/jack-crawford-1"
               target="_blank"

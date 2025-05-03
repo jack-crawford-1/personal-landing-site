@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { ColourfulLetter } from '../shared/ColourfulLetter';
 import { DownloadCv } from '../utils/DownloadCv';
+import { ColourfulLinks } from '../shared/ColourfulLinks';
 
 export default function LinksBottom() {
   const [currentPath, setCurrentPath] = useState('');
@@ -28,20 +29,20 @@ export default function LinksBottom() {
             }}
             className="bg-transparent border-none uppercase cursor-pointer text-sm"
           >
-            <ColourfulLetter
+            <ColourfulLinks
               letter={isOnAboutOrProjectPage ? 'PROJECTS' : 'ABOUT'}
             />
           </button>
         </li>
-        <li className="hover:text-gray-200 uppercase">
+        {/* <li className="hover:text-gray-200 uppercase">
           <a
             href="mailto:hello@jackcrawford.co.nz"
             target="_blank"
             className="text-sm"
           >
-            <ColourfulLetter letter={'EMAIL ME'} />
+            <ColourfulLinks letter={'EMAIL ME'} />
           </a>
-        </li>
+        </li> */}
         <li className="hover:text-gray-200 uppercase">
           <button
             onClick={DownloadCv}
