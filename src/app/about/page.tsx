@@ -9,8 +9,8 @@ import { DownloadCv } from '@/src/utils/DownloadCv';
 
 const About = () => {
   return (
-    <div className="relative bg-dark text-light h-screen flex flex-col justify-center items-center p-10 md:p-20 pb-20">
-      <div className="w-full flex justify-start mt-40 md:mt-0  pb-10 md:pl-30 pt-60 md:pt-0">
+    <div className=" bg-dark text-light flex flex-col justify-center items-center p-10 md:p-20 pb-20  pt-20">
+      <div className="w-full flex justify-start md:mt-0  pb-10 md:pl-30 pt-10 md:pt-0">
         <Hero />
       </div>
 
