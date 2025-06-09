@@ -1,18 +1,25 @@
+import { ColourfulLinks } from '../shared/ColourfulLinks';
+
 const IntroText = () => {
   return (
-    <div className="max-w-[650px] mx-auto text-md">
-      I'm always keen to learn and enjoy challenges that involve both people and
-      problem solving. Outside of work, I like spending time outdoors, playing
-      guitar, and keeping my garden alive. This site shows an overview of some
-      of the projects I've worked on, mostly using React, Node, MongoDB and
-      Tailwind CSS.
+    <div className="max-w-[600px] mx-auto text-md leading-7 text-gray-300">
+      I got into coding through a mix of side projects and spending time working
+      alongside developers, product managers, and data analytics teams. Being
+      part of those conversations and seeing how things were built made me want
+      to try it for myself — and what started as curiosity just stuck.
       <br />
       <br />
-      Lately I’ve been building things like payment flows, API integrations, and
-      interactive map features, mostly working across both the front and back
-      end. Before getting into tech, I worked in account management for several
-      years, which gave me experience translating between user needs and
-      technical constraints.
+      Recently, I've been working on features like payment flows in a
+      subscriptions app, originally built to help troubleshoot API integration
+      issues for merchants at work. I’ve also been building an interactive map
+      site for a separate project, which came out of a personal interest in
+      gardening and a lack of existing resources. It’s turned into a way to
+      combine tech with something more community-focused.
+      <br />
+      <br />
+      Outside of work, I enjoy playing guitar and gardening in my small urban
+      courtyard. This site is a showcase of some projects I've built — mostly
+      using React, Node, MongoDB, and Tailwind CSS.
     </div>
   );
 };

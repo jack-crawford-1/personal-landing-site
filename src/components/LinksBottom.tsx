@@ -22,7 +22,7 @@ export default function LinksBottom() {
   return (
     <div className="flex justify-end items-center w-full absolute bottom-0 right-10 p-5">
       <ul className="flex gap-5 justify-center items-center text-gray-400 ubuntu-bold uppercase">
-        <li className="hover:text-gray-200 uppercase">
+        {/* <li className="hover:text-gray-200 uppercase">
           <button
             onClick={() => {
               window.location.href = isOnAboutOrProjectPage ? '/' : '/about';
@@ -33,8 +33,8 @@ export default function LinksBottom() {
               letter={isOnAboutOrProjectPage ? 'PROJECTS' : 'ABOUT'}
             />
           </button>
-        </li>
-        {/* <li className="hover:text-gray-200 uppercase">
+        </li> */}
+        <li className="hover:text-gray-200 uppercase">
           <a
             href="mailto:hello@jackcrawford.co.nz"
             target="_blank"
@@ -42,7 +42,7 @@ export default function LinksBottom() {
           >
             <ColourfulLinks letter={'EMAIL ME'} />
           </a>
-        </li> */}
+        </li>
         <li className="hover:text-gray-200 uppercase">
           <button
             onClick={DownloadCv}

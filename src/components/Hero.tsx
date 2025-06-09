@@ -6,7 +6,7 @@ export function HeroText() {
   return (
     <>
       <div>
-        <div className="text-6xl md:text-7xl uppercase font-bold fredoka-variable">
+        <div className="text-6xl md:text-8xl uppercase font-bold fredoka-variable">
           <Link href={'/'}>
             <h1>
               <AnimatedText>Jack Crawford</AnimatedText>

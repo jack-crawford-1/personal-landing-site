@@ -17,7 +17,7 @@ export function ColourfulLinks({ letter }: { letter: string }) {
 
   const handleMouseEnter = () => {
     setIsHovered(true);
-    setColour(GetNatureColour());
+    setColour(GetMidtoneColour());
   };
 
   const handleMouseLeave = () => {

@@ -19,6 +19,7 @@ export default function Skills() {
           </p>
         ))}
       </div>
+      <TechStackLogos />
       {/* <div className="mt-8 w-screen flex justify-left items-center flex-wrap ">
         <TechStackLogos />
       </div> */}
