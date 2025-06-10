@@ -20,10 +20,10 @@ export default function Links() {
     currentPath.startsWith('/hiking');
 
   return (
-    <div className="flex justify-end items-center w-full absolute top-4 md:top-5 right-10 p-5">
-      <ul className="flex gap-5 justify-center items-center text-gray-400 ubuntu-bold uppercase">
+    <div className="flex justify-end items-center w-full absolute top-0 md:top-5 right-10 p-5 ">
+      <ul className="flex gap-5 justify-center items-center text-gray-400 ubuntu-bold uppercase ">
         <li className="hover:text-gray-200 uppercase flex items-center justify-center"></li>
-        <div className=" gap-4 mt-20 pb-10 flex items-center justify-center">
+        <div className=" gap-4 mt-20 pb-10 flex items-center justify-center ">
           <a
             href="mailto:hello@jackcrawford.co.nz"
             target="_blank"

@@ -8,7 +8,8 @@ body {
 
 :root {
   --background-light: #ffffff8a;
-  --background-dark: #131212;
+  /* --background-dark: #131212; */
+  --background-dark: #15161a;
   --background-card-dark: #252323;
   --text-dark: #000000;
   --text-light: #e6d5d5;

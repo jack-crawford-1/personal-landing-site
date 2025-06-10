@@ -2,7 +2,7 @@ import { ColourfulLinks } from '../shared/ColourfulLinks';
 
 const IntroText = () => {
   return (
-    <div className="max-w-[600px] mx-auto text-md leading-7 text-gray-300">
+    <div className="max-w-[600px] mx-auto text-md leading-7 text-gray-300 p-10">
       I got into coding through a mix of side projects and spending time working
       alongside developers, product managers, and data analytics teams. Being
       part of those conversations and seeing how things were built made me want

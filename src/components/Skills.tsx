@@ -3,9 +3,14 @@ import { skills } from '../data/skills';
 
 export default function Skills() {
   return (
-    <div className="w-full text-sm bg-dark text-light mt-4 pl-1">
+    <div className="w-full text-sm bg-dark text-light mt-4 md:mt-20 pl-5 md:p-5">
       <div className="leading-8 p-2">
-        {/* <h2 className="text-2xl font-bold mb-4">Skills</h2> */}
+        <h2
+          className="md:text-4xl md:pb-5 text-4xl font-bold uppercase fredoka-variable"
+          id="projects"
+        >
+          Skills
+        </h2>
         {Object.entries(skills).map(([category, description]) => (
           <p key={category}>
             <span className="font-bold">
@@ -20,9 +25,6 @@ export default function Skills() {
         ))}
       </div>
       <TechStackLogos />
-      {/* <div className="mt-8 w-screen flex justify-left items-center flex-wrap ">
-        <TechStackLogos />
-      </div> */}
     </div>
   );
 }
