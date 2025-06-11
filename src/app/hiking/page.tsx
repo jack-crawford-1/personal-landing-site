@@ -28,12 +28,12 @@ const Hiking = () => {
         <Hero />
       </div>
 
-      <div className="max-w-2xl">
+      <div className="max-w-2xl z-100">
         <Link
           href="/"
-          className="text-gray-400 hover:text-white text-sm mb-4 block"
+          className="text-gray-300 hover:text-white text-md mb-4 block"
         >
-          ← All Projects
+          ← Back to home
         </Link>
         <div className=" space-y-6 text-left">
           <h2 className="text-xl font-bold ubuntu-bold">

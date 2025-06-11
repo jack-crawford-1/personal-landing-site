@@ -1,5 +1,9 @@
 import { useState, useEffect } from 'react';
-import { GetMidtoneColour, GetNatureColour } from '../utils/GetRandomColour';
+import {
+  GetMidtoneColour,
+  GetNatureColour,
+  GetRandomColour,
+} from '../utils/GetRandomColour';
 
 export function ColourfulLetter({ letter }: { letter: string }) {
   const [colour, setColour] = useState('#ffffff');
@@ -17,7 +21,7 @@ export function ColourfulLetter({ letter }: { letter: string }) {
 
   const handleMouseEnter = () => {
     setIsHovered(true);
-    setColour(GetNatureColour());
+    setColour(GetRandomColour());
   };
 
   const handleMouseLeave = () => {

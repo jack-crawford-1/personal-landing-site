@@ -28,12 +28,12 @@ const Keys = () => {
         <Hero />
       </div>
 
-      <div className="max-w-2xl">
+      <div className="max-w-2xl z-100">
         <Link
           href="/"
-          className="text-gray-400 hover:text-white text-sm mb-4 block"
+          className="text-gray-300 hover:text-white text-md mb-4 block"
         >
-          ← All Projects
+          ← Back to home
         </Link>
         <div className=" space-y-6 text-left">
           <h2 className="text-xl font-bold ubuntu-bold">
@@ -121,13 +121,11 @@ const Keys = () => {
                 </div>
               ))}
             </div>
-
-            <div className="flex gap-2 max-w-4xl flex-wrap"></div>
           </div>
         </div>
-        <div className="mt-10 text-center flex justify-start">
+        <div className="mt-10 text-center flex justify-start z-100">
           <Link href={'/communitygarden'}>
-            <button className="border-white border-2 text-white py-2 px-4 rounded-md text-sm font-medium hover:bg-blue-500 transition cursor-pointer ">
+            <button className="border-white border-2 text-white py-2 px-4 rounded-md text-sm font-medium  transition cursor-pointer w-full hover:bg-blue-500">
               Next Project →
             </button>
           </Link>
