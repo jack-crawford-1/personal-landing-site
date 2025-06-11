@@ -3,10 +3,10 @@ import { skills } from '../data/skills';
 
 export default function Skills() {
   return (
-    <div className="w-full text-sm bg-dark text-light mt-4 md:mt-20 pl-5 md:p-5">
+    <div className="w-full text-sm bg-dark text-light mt-4 md:mt-20 pl-8 md:p-5">
       <div className="leading-8 p-2">
         <h2
-          className="md:text-4xl md:pb-5 text-4xl font-bold uppercase fredoka-variable"
+          className="md:text-4xl md:pb-5 pb-2 text-4xl font-bold uppercase fredoka-variable"
           id="projects"
         >
           Skills

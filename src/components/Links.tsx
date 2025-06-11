@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ColourfulLetter } from '../shared/ColourfulLetter';
+
 import { DownloadCv } from '../utils/DownloadCv';
 import { ColourfulLinks } from '../shared/ColourfulLinks';
 
