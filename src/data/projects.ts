@@ -10,7 +10,7 @@ export const projects = [
       '/projects/images/garden1.png',
     ],
     alt: 'Community garden',
-    title: 'Community Garden',
+    title: 'NZ Community Gardens - React.js Tailwind CSS MongoDB',
     route: 'communitygarden',
     shortDescription:
       'Full-stack web app designed to make it easier for communities to discover, contribute to, and manage local garden spaces. Whether someone wants to share their garden with others or find one nearby',
@@ -71,7 +71,7 @@ export const projects = [
       '/projects/images/subscribe1.png',
     ],
     alt: 'Subscribe and Pay',
-    title: 'Subscribe and Pay',
+    title: 'Subscription App with Paystation API and MongoDB',
     route: 'subscribe',
     shortDescription:
       'A full-stack subscription management app built with a React frontend and a Node/Express backend. It allows users to create accounts, subscribe to plans, process payments via a third-party payment gateway, and manage their subscriptions',
@@ -132,7 +132,7 @@ export const projects = [
       '/projects/images/hiking1.png',
     ],
     alt: 'Custom Map',
-    title: 'DOC Hiking Trails',
+    title: 'Hiking App with React, PostgreSQL and the Google Maps API',
     route: 'hiking',
     shortDescription:
       'Full-stack web app designed to help users explore and track walking and biking trails throughout New Zealand. It integrates geospatial data, a user-friendly map interface, and custom tracking features—combining frontend interactivity with backend data persistence.',
@@ -188,7 +188,7 @@ export const projects = [
       '/projects/images/keys1.png',
     ],
     alt: 'Keyboard',
-    title: 'Tonejs Keyboard',
+    title: 'Piano App with React and the Tonejs API',
     route: 'keys',
     shortDescription:
       'A lightweight React-based virtual piano app that lets users play notes and view common chords visually and audibly. It was a fun way to blend frontend development with real-time audio playback and UI design.',

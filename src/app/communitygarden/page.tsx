@@ -11,7 +11,8 @@ import CustomVideoPlayer from '@/src/components/VideoPlayer';
 
 const CommunityGardens = () => {
   const gardenProject = projects.find(
-    (project) => project.title === 'Community Garden'
+    (project) =>
+      project.title === 'NZ Community Gardens - React.js Tailwind CSS MongoDB'
   );
 
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -50,9 +51,9 @@ const CommunityGardens = () => {
             <div>
               {singleProject.map((project, index) => (
                 <div key={index}>
-                  <h3 className="text-md ubuntu-bold uppercase w-full sm:w-auto pb-2 pt-6">
+                  {/* <h3 className="text-md ubuntu-bold uppercase w-full sm:w-auto pb-2 pt-6">
                     {project.title}
-                  </h3>
+                  </h3> */}
                   <p>{project.overview}</p>
                   <h4 className="text-md ubuntu-bold uppercase w-full sm:w-auto pb-2 md:pt-6 pt-10">
                     {project.title2}

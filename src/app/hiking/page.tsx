@@ -11,7 +11,9 @@ import { Singleproject } from '@/src/data/hikingProject';
 
 const Hiking = () => {
   const gardenProject = projects.find(
-    (project) => project.title === 'DOC Hiking Trails'
+    (project) =>
+      project.title ===
+      'Hiking App with React, PostgreSQL and the Google Maps API'
   );
 
   const videoRef = useRef<HTMLVideoElement>(null);

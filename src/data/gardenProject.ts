@@ -1,6 +1,6 @@
 export const Singleproject = [
   {
-    title: 'Community Garden Web App with Next.js and Prisma',
+    title: 'NZ Community Gardens - React.js Tailwind CSS MongoDB',
     overview:
       'This project is a full-stack web app designed to make it easier for communities to discover, contribute to, and manage local garden spaces. Whether someone wants to share their garden with others or find one nearby, this app provides a clean and simple interface to connect people through shared spaces and sustainable living.',
 

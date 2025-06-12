@@ -4,7 +4,7 @@ import Tooltip from '../shared/Tooltip';
 export default function TechStackLogos() {
   return (
     <div className="mt-8 w-full flex justify-center items-center">
-      <div className="md:gap-5 gap-3 flex flex-wrap justify-center">
+      <div className="md:gap-5 gap-1 flex flex-wrap justify-center">
         <Tooltip text="React.js">
           <Image
             src="/logos/react.png"
@@ -13,14 +13,14 @@ export default function TechStackLogos() {
             height={30}
           />
         </Tooltip>
-        <Tooltip text="Next.js">
+        {/* <Tooltip text="Next.js">
           <Image
             src="/logos/nextjs.png"
             alt="Next.js Logo"
             width={30}
             height={30}
           />
-        </Tooltip>
+        </Tooltip> */}
 
         <Tooltip text="Javascript">
           <Image

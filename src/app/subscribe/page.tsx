@@ -10,7 +10,8 @@ import CustomVideoPlayer from '@/src/components/VideoPlayer';
 
 const Subscribe = () => {
   const gardenProject = projects.find(
-    (project) => project.title === 'Subscribe and Pay'
+    (project) =>
+      project.title === 'Subscription App with Paystation API and MongoDB'
   );
 
   if (!gardenProject) {

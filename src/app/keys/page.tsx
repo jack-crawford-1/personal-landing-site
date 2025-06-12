@@ -11,7 +11,7 @@ import { keysProject } from '@/src/data/keysProject';
 
 const Keys = () => {
   const gardenProject = projects.find(
-    (project) => project.title === 'Tonejs Keyboard'
+    (project) => project.title === 'Piano App with React and the Tonejs API'
   );
 
   const videoRef = useRef<HTMLVideoElement>(null);

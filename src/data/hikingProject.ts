@@ -1,6 +1,6 @@
 export const Singleproject = [
   {
-    title: 'Trail Tracking Web App with React and PostgreSQL',
+    title: 'Hiking App with React, PostgreSQL and the Google Maps API',
     overview:
       'Full-stack web app designed to help users explore and track walking and biking trails throughout New Zealand. It integrates geospatial data, a user-friendly map interface, and custom tracking features—combining frontend interactivity with backend data persistence.',
 
