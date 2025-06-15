@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className=" bg-dark text-light ubuntu-regular">
       <div className="flex flex-row justify-center items-center w-full  ">
-        <div className="md:text-8xl text-5xl text-left md:mr-60 fredoka-variable uppercase">
+        <div className="md:text-7xl text-5xl text-left md:mr-140 fredoka-variable uppercase">
           <Link href={'/'}>
             <h1 className="p-10 md:p-0 md:pt-20">
               <AnimatedText>Jack Crawford</AnimatedText>
@@ -22,7 +22,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className=" absolute top-20 right-10 hidden md:block">
+      <div className=" absolute top-20 right-20 hidden md:block">
         <div className="flex items-center justify-center gap-4">
           <a
             href="mailto:hello@jackcrawford.co.nz"
@@ -76,7 +76,7 @@ export default function Home() {
                 className="mr-2"
               />
 
-              <ColourfulLinks letter={'CV PDF'} />
+              <ColourfulLinks letter={'CV'} />
             </span>
           </button>
         </div>

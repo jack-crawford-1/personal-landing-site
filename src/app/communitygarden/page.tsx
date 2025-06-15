@@ -24,8 +24,8 @@ const CommunityGardens = () => {
   const singleProject = Singleproject;
 
   return (
-    <div className="relative bg-dark text-light min-h-screen flex flex-col items-center p-3 space-y-2 pb-20">
-      <div className="w-full flex justify-center md:pb-20 mt-3 mb-10 md:mt-10 ">
+    <div className="relative bg-dark text-light min-h-screen flex flex-col items-center p-3 space-y-2">
+      <div className="w-full flex justify-center md:mr-60 md:pb-20 mt-3 mb-10 md:mb-0 md:mt-10 ">
         <Hero />
       </div>
 
