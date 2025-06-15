@@ -75,7 +75,7 @@ export default function LinksBottom() {
                 className="mr-2"
               />
 
-              <ColourfulLinks letter={'CV PDF'} />
+              <ColourfulLinks letter={'CV'} />
             </span>
           </button>
         </div>

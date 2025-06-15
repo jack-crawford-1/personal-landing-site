@@ -24,42 +24,35 @@ const CommunityGardens = () => {
   const singleProject = Singleproject;
 
   return (
-    <div className="relative bg-dark text-light min-h-screen flex flex-col items-center p-10 space-y-2 pb-20">
-      <div className="w-full flex justify-start pb-10  mt-10 md:mt-0 md:pl-80">
+    <div className="relative bg-dark text-light min-h-screen flex flex-col items-center p-3 space-y-2 pb-20">
+      <div className="w-full flex justify-center md:pb-20 mt-3 mb-10 md:mt-10 ">
         <Hero />
       </div>
 
-      <div className="max-w-2xl z-100">
-        <Link
-          href="/"
-          className="text-gray-300 hover:text-white text-md mb-4 block"
-        >
-          ← Back to home
-        </Link>
-        <div className=" space-y-6 text-left">
-          <h2 className="text-xl font-bold ubuntu-bold">
+      <div className="md:max-w-4xl md:p-5">
+       
+        <div className="w-full max-w-full px-4 md:px-10">
+          <h2 className="ubuntu-bold md:text-3xl text-xl font-bold text-left mb-10  w-full overflow-wrap">
             {singleProject.map((project) => project.title)}
           </h2>
-          <div className="w-screen md:w-full px-2 -mx-10 md:mx-0">
+          <div className="w-full  md:mx-0">
             <CustomVideoPlayer
               videoSource={gardenProject.video}
               posterSource={gardenProject.images[0]}
             />
           </div>
 
-          <div className="space-y-4 pt-4 text-start">
-            <div>
+          
+            <div className=''>
               {singleProject.map((project, index) => (
                 <div key={index}>
-                  {/* <h3 className="text-md ubuntu-bold uppercase w-full sm:w-auto pb-2 pt-6">
-                    {project.title}
-                  </h3> */}
-                  <p>{project.overview}</p>
+                 
+                  <p className='md:max-w-2xl pt-10'>{project.overview}</p>
                   <h4 className="text-md ubuntu-bold uppercase w-full sm:w-auto pb-2 md:pt-6 pt-10">
                     {project.title2}
                   </h4>
-                  <p>{project.description2}</p>
-                  <div className="flex flex-wrap gap-4 justify-start pt-6 ">
+                  <p className='md:max-w-2xl'>{project.description2}</p>
+                  <div className="flex flex-wrap gap-1 md:gap-6 justify-start pt-6 ">
                     {gardenProject.icons?.map((icon, index) => (
                       <Image
                         key={index}
@@ -74,7 +67,7 @@ const CommunityGardens = () => {
                   <h4 className="text-md ubuntu-bold uppercase w-full sm:w-auto pb-2 md:pt-6 pt-10">
                     {project.title3}
                   </h4>
-                  <p>{project.description3}</p>
+                  <p className='md:max-w-2xl '>{project.description3}</p>
                   <Image
                     src={gardenProject.images[3]}
                     alt={`${gardenProject.title} Image}`}
@@ -85,7 +78,7 @@ const CommunityGardens = () => {
                   <h4 className="text-md ubuntu-bold uppercase w-full sm:w-auto pb-2 md:pt-6 pt-10">
                     {project.title4}
                   </h4>
-                  <p>{project.description4}</p>
+                  <p className='md:max-w-2xl'>{project.description4}</p>
                   <Image
                     src={gardenProject.images[1]}
                     alt={`${gardenProject.title} Image}`}
@@ -96,7 +89,7 @@ const CommunityGardens = () => {
                   <h4 className="text-md ubuntu-bold uppercase w-full sm:w-auto pb-2 md:pt-6 pt-10">
                     {project.title5}
                   </h4>
-                  <p>{project.description5}</p>
+                  <p className='md:max-w-2xl'>{project.description5}</p>
                   <Image
                     src={gardenProject.images[0]}
                     alt={`${gardenProject.title} Image}`}
@@ -107,20 +100,30 @@ const CommunityGardens = () => {
                   <h4 className="text-md ubuntu-bold uppercase w-full sm:w-auto pb-2 md:pt-6 pt-10">
                     {project.title6}
                   </h4>
-                  <p>{project.description6}</p>
+                  <p className='md:max-w-2xl'>{project.description6}</p>
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-        <div className="mt-10 text-center flex justify-start z-100">
+            <div className="mt-10 text-center flex md:justify-start justify-center  md:mb-0  relative z-10">
           <Link href={'/subscribe'}>
             <button className="border-white border-2 text-white py-2 px-4 rounded-md text-sm font-medium  transition cursor-pointer w-full hover:bg-blue-500">
               Next Project →
             </button>
           </Link>
         </div>
+        <div className="mt-5 text-center flex md:justify-start justify-center  md:mb-0 mb-20 relative z-10">
+          <Link href={'/'}>
+            <button className=" text-white py-2 px-4 rounded-md text-sm font-medium  transition cursor-pointer w-full hover:bg-blue-500">
+              ← Home
+            </button>
+          </Link>
+        </div>
+          
+          
+        </div>
+        
       </div>
+      
       <LinksBottom />
     </div>
   );

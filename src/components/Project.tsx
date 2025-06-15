@@ -3,36 +3,39 @@ import LinksBottom from './LinksBottom';
 
 const Project = () => {
   return (
-    <div className="relative flex flex-col items-center justify-center w-full h-fit mt-5 ">
-      <div className="flex flex-col xl:flex-row w-full  pb-40 items-center justify-center ">
-        <div className="grid grid-cols-1 md:grid-cols-1  md:gap-20 md:p-10 ">
+    <div className="relative flex flex-col items-center justify-center w-full h-fit mt-10 md:mt-0">
+      <div className="flex flex-col xl:flex-row w-full pb-40 items-center justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-1 md:gap-20 md:p-40">
           {projects.map((project) => (
-            <div
+            <a
               key={project.id}
-              className=" md:p-60 md:pt-10 md:pb-10 md:rounded-md pt-10  md:shadow-lg shadow-sm shadow-[#0000005d]  "
+              href={project.route}
+              className="md:flex md:items-center md:gap-10 md:p-10 p-5 md:rounded-md md:shadow-lg shadow-sm shadow-[#0000005d] md:border-4 border-gray-800 transition hover:bg-gray-800/30"
             >
-              <h3 className="ubuntu-bold md:text-3xl text-2xl font-bold  text-left md:pb-4 max-w-md md:max-w-lg mx-auto p-5 md:p-0 pb-0 mt-2 md:mt-0 ">
-                {project.title}
-              </h3>
-              <a href={project.route}>
+              {/* Left: Text content */}
+              <div className="md:w-1/2 space-y-4">
+                <h3 className="ubuntu-bold md:text-3xl text-2xl font-bold text-left">
+                  {project.title}
+                </h3>
+                <p className="text-sm md:text-md max-w-xl">{project.shortDescription}</p>
+                <span className="inline-block text-sm text-blue-300 hover:underline">
+                  Read more →
+                </span>
+              </div>
+
+              {/* Right: Image */}
+              <div className="md:w-1/2">
                 <img
                   src={project.images[0]}
                   alt={project.title}
-                  className="w-full h-54 md:h-90 md:mb-10 mb-1 object-cover p-5"
+                  className="w-full h-auto md:h-[300px] object-cover rounded-md mt-5 md:mt-0"
                 />
-                <div className="p-6 pt-0">
-                  <p className="mb-4 max-w-xl text-sm md:text-md">
-                    {project.shortDescription}
-                  </p>
-                  <span className="hover:underline hover:text-gray-300 transition-all duration-300">
-                    Read more →
-                  </span>
-                </div>
-              </a>
-            </div>
+              </div>
+            </a>
           ))}
         </div>
       </div>
+
       <LinksBottom />
     </div>
   );
