@@ -5,7 +5,7 @@ const Project = () => {
   return (
     <div className="relative flex flex-col items-center justify-center w-full h-fit mt-10 md:mt-0">
       <div className="flex flex-col xl:flex-row w-full pb-40 items-center justify-center">
-        <div className="grid grid-cols-1 md:grid-cols-1 md:gap-20 md:p-40">
+        <div className="grid grid-cols-1 md:grid-cols-1 md:gap-10 md:p-80 md:pt-20 md:pb-20">
           {projects.map((project) => (
             <a
               key={project.id}
@@ -28,7 +28,7 @@ const Project = () => {
                 <img
                   src={project.images[0]}
                   alt={project.title}
-                  className="w-full h-auto md:h-[300px] object-cover rounded-md mt-5 md:mt-0"
+                  className="w-full h-auto md:h-[250px] object-cover rounded-md mt-5 md:mt-0"
                 />
               </div>
             </a>

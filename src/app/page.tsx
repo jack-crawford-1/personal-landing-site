@@ -22,15 +22,16 @@ export default function Home() {
         </div>
       </div>
 
-      <div className=" absolute top-20 right-20 hidden md:block">
+      <div className=" absolute top-20 right-30 hidden md:block border-0  border-pink-600 py-2 px-4 rounded-md">
         <div className="flex items-center justify-center gap-4">
+          <p className='uppercase ubuntu-bold'>contact me →</p>
           <a
             href="mailto:hello@jackcrawford.co.nz"
             target="_blank"
             className="text-sm"
           >
             <img
-              src="/logos/email.png"
+              src="/logos/email1.svg"
               alt="Email"
               width={30}
               height={30}
@@ -43,7 +44,7 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             <img
-              src="/logos/linkedin.png"
+              src="/logos/lin1.svg"
               alt="LinkedIn"
               width={30}
               height={30}
@@ -63,26 +64,25 @@ export default function Home() {
               className="hover:opacity-80 transition"
             />
           </a>
-          <button
+          <a
+            href="https://github.com/jack-crawford-1"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={DownloadCv}
-            className=" border-blue-400 border-2 text-white py-2 px-4 rounded-md text-xs font-medium bg-blue-500 hover:bg-blue-700 transition cursor-pointer uppercase"
           >
-            <span className=" flex ">
-              <img
-                src="/icons/download.svg"
-                alt="download"
-                height={15}
-                width={15}
-                className="mr-2"
-              />
-
-              <ColourfulLinks letter={'CV'} />
-            </span>
-          </button>
+            <img
+              src="/logos/cv1.svg"
+              alt="download"
+              width={30}
+              height={30}
+              className="hover:opacity-80 transition"
+            />
+          </a>
+          
         </div>
       </div>
-      <div className=" justify-center items-center flex flex-col mt-1">
-        <div className="flex md:flex-row flex-col items-center justify-center w-fit h-full">
+      <div className=" justify-center items-center flex flex-col mt-1 border-0 border-yellow-400">
+        <div className="flex md:flex-row flex-col items-center justify-center w-fit h-full border-0 border-green-400">
           <div className="md:w-1/2 w-full min-h-[500px] border-0 border-red-400 flex justify-center items-center">
             <div className="w-full md:w-[600px] h-full  p-6 md:p-0 pt-0 max-w-md md:max-w-full">
               <p className="text-sm leading-6  mb-4">
@@ -143,9 +143,12 @@ export default function Home() {
         </div>
       </div>
 
-      <div className=" w-full  rounded-md bg-[#00000000] flex justify-center">
+      <div className=" w-full  rounded-md  flex justify-center">
         <Project />
       </div>
     </div>
   );
 }
+
+
+// bg-[#00000000]

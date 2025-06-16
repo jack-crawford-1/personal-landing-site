@@ -19,17 +19,20 @@ export default function LinksBottom() {
     currentPath.startsWith('/subscribe') ||
     currentPath.startsWith('/hiking');
   return (
-    <div className="flex justify-end items-center w-full absolute bottom-4 md:bottom-5 right-10 p-5">
-      <ul className="flex gap-5 justify-center items-center text-gray-400 ubuntu-bold uppercase">
-        <li className="hover:text-gray-200 uppercase flex items-center justify-center"></li>
+    <div className="flex justify-end items-center w-full absolute bottom-4 md:bottom-5 right-30 p-5">
+      <ul className="flex gap-5 justify-center items-center ubuntu-bold uppercase">
+        
+        <li className="hover:text-gray-200 flex items-center justify-center"></li>
+        
         <div className=" gap-4 mt-20 pb-10 flex items-center justify-center">
+          <p className='pr-5'>contact me →</p>
           <a
             href="mailto:hello@jackcrawford.co.nz"
             target="_blank"
             className="text-sm"
           >
             <img
-              src="/logos/email.png"
+              src="/logos/email1.svg"
               alt="Email"
               width={30}
               height={30}
@@ -42,7 +45,7 @@ export default function LinksBottom() {
             rel="noopener noreferrer"
           >
             <img
-              src="/logos/linkedin.png"
+              src="/logos/lin1.svg"
               alt="LinkedIn"
               width={30}
               height={30}
@@ -62,22 +65,20 @@ export default function LinksBottom() {
               className="hover:opacity-80 transition"
             />
           </a>
-          <button
+          <a
+            href="https://github.com/jack-crawford-1"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={DownloadCv}
-            className=" border-blue-400 border-2 text-white py-2 px-4 rounded-md text-xs font-medium bg-blue-500 hover:bg-blue-700 transition cursor-pointer uppercase"
           >
-            <span className=" flex ">
-              <img
-                src="/icons/download.svg"
-                alt="download"
-                height={15}
-                width={15}
-                className="mr-2"
-              />
-
-              <ColourfulLinks letter={'CV'} />
-            </span>
-          </button>
+            <img
+              src="/logos/cv1.svg"
+              alt="download"
+              width={30}
+              height={30}
+              className="hover:opacity-80 transition"
+            />
+          </a>
         </div>
       </ul>
     </div>

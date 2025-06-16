@@ -113,7 +113,7 @@ const CommunityGardens = () => {
         </div>
         <div className="mt-5 text-center flex md:justify-start justify-center  md:mb-0 mb-20 relative z-10">
           <Link href={'/'}>
-            <button className=" text-white py-2 px-4 rounded-md text-sm font-medium  transition cursor-pointer w-full hover:bg-blue-500">
+            <button className=" text-white py-2 px-4 rounded-md text-sm font-medium  transition cursor-pointer w-full hover:bg-blue-500 mb-10 md:mb-0">
               ← Home
             </button>
           </Link>
