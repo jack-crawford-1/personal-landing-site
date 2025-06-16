@@ -63,7 +63,7 @@ export default function Links() {
               className="hover:opacity-80 transition"
             />
           </a>
-          <button
+          <a
             onClick={DownloadCv}
             className=" border-blue-400 border-2 text-white py-2 px-4 rounded-md text-xs font-medium bg-blue-500 hover:bg-blue-700 transition cursor-pointer uppercase"
           >
@@ -78,7 +78,7 @@ export default function Links() {
 
               <ColourfulLinks letter={'CV'} />
             </span>
-          </button>
+          </a>
         </div>
       </ul>
     </div>
