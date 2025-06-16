@@ -1,6 +1,6 @@
 import Confetti from './Confetti';
 
-export const DownloadCv = (e: React.MouseEvent<HTMLButtonElement>) => {
+export const DownloadCv = (e: React.MouseEvent<HTMLAnchorElement>) => {
   e.preventDefault();
   const link = document.createElement('a');
   link.href = '/documents/jack-crawford-cv.pdf';

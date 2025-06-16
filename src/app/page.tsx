@@ -24,7 +24,7 @@ export default function Home() {
 
       <div className=" absolute top-20 right-30 hidden md:block border-0  border-pink-600 py-2 px-4 rounded-md">
         <div className="flex items-center justify-center gap-4">
-          <p className='uppercase ubuntu-bold'>contact me →</p>
+          <p className='uppercase ubuntu-bold'>contact me → </p>
           <a
             href="mailto:hello@jackcrawford.co.nz"
             target="_blank"
@@ -65,7 +65,7 @@ export default function Home() {
             />
           </a>
           <a
-            href="https://github.com/jack-crawford-1"
+            href={"https://github.com/jack-crawford-1"}
             target="_blank"
             rel="noopener noreferrer"
             onClick={DownloadCv}
